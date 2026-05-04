@@ -1,0 +1,25 @@
+[project]
+name = "hayoung-data-generator"
+version = "0.1.0"
+description = "Sample commerce data generator for the HaYoung data platform"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.8.0"
+]
+
+[project.scripts]
+hayoung-generate = "hayoung_generator.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hayoung_generator"]
