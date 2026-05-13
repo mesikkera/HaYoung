@@ -1,4 +1,5 @@
 import json
+
 import typer
 
 from hayoung_generator import __version__
@@ -15,10 +16,12 @@ app = typer.Typer(
 def main() -> None:
     """HaYoung data-generator CLI."""
 
+
 @app.command()
 def health() -> None:
     """Check whether the data-generator CLI is available."""
     typer.echo(f"HaYoung data-generator is ready. version={__version__}")
+
 
 @app.command("show-config")
 def show_config() -> None:

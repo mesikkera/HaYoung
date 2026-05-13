@@ -1,8 +1,8 @@
 from datetime import date
-
 from pathlib import Path
 
 from hayoung_generator.config import GeneratorConfig
+
 
 def test_default_config() -> None:
 
@@ -15,6 +15,7 @@ def test_default_config() -> None:
     assert config.product_count == 300
     assert config.order_count == 5_000
     assert config.output_dir == Path("data/raw")
+
 
 def test_config_to_dict() -> None:
     config = GeneratorConfig()
